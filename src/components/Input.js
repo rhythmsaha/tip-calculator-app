@@ -1,6 +1,6 @@
 import classes from "./Input.module.scss";
 
-const Input = ({ label, icon, state, setState }) => {
+const Input = ({ label, icon, state, setState, onFocus }) => {
     const inputChangeHandler = (e) => {
         setState(e.target.value);
     };
@@ -17,7 +17,8 @@ const Input = ({ label, icon, state, setState }) => {
                     id={label}
                     placeholder={0}
                     onChange={inputChangeHandler}
-                    value={state}
+                    value={state === 0 ? "" : state}
+                    onFocus={onFocus}
                 />
             </div>
         </div>
