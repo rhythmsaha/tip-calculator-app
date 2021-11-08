@@ -1,0 +1,54 @@
+@use "../styles//varaiables.scss" as v;
+
+.inputGroup {
+    label {
+        color: v.$dark-grayish-cyan-1;
+        font-weight: 700;
+    }
+
+    div {
+        margin-top: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        label {
+            position: absolute;
+            left: 2px;
+            padding: 0 1rem;
+            background: v.$light-grayish-cyan-2;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            width: 100%;
+            text-align: right;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.2s;
+            background: transparent;
+            font-size: 24px;
+            font-weight: bold;
+            background: v.$light-grayish-cyan-2;
+            font-family: "Space Mono", monospace;
+            color: v.$very-dark-cyan;
+
+            &::selection {
+                color: white;
+                background: v.$very-dark-cyan;
+            }
+
+            &::placeholder {
+                color: v.$dark-grayish-cyan_2;
+            }
+
+            &:focus {
+                border: 2px solid v.$strong-cyan;
+            }
+        }
+    }
+}

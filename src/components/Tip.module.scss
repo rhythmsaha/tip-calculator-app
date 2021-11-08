@@ -1,0 +1,71 @@
+@use "../styles/varaiables.scss" as v;
+
+.label {
+    color: v.$dark-grayish-cyan-1;
+    font-weight: 700;
+}
+
+.btnGroup {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0.5rem;
+    margin-top: 1%;
+
+    @media screen and (min-width: 1200px) {
+        grid-template-columns: 32% 32% 32%;
+    }
+
+    button {
+        outline: none;
+        border: none;
+        background: v.$very-dark-cyan;
+        color: white;
+        border-radius: 8px;
+        font-family: "space mono";
+        font-size: 24px;
+        cursor: pointer;
+        font-weight: bold;
+
+        height: 3.5rem;
+
+        @media screen and (min-width: 1200px) {
+            height: 4rem;
+        }
+    }
+
+    .active {
+        background: v.$strong-cyan;
+        color: v.$very-dark-cyan;
+    }
+
+    .custom {
+        outline: none;
+        border: none;
+        text-align: center;
+        background: v.$light-grayish-cyan-2;
+        padding: 8px 1rem;
+        border-radius: 8px;
+        font-family: "space mono";
+        font-size: 24px;
+        font-weight: bold;
+        transition: 0.3s;
+        color: v.$very-dark-cyan;
+        border: 4px solid transparent;
+        cursor: pointer;
+
+        &::placeholder {
+            font-family: "space mono";
+            font-size: 24px;
+            font-weight: bold;
+            color: v.$very-dark-cyan;
+        }
+
+        &:focus {
+            border-color: v.$strong-cyan;
+
+            &::placeholder {
+                color: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@use "varaiables" as v;
+
+.Main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        color: v.$very-dark-cyan;
+        letter-spacing: 12px;
+        font-size: 1.2rem;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 0 0 0 black;
+
+    @media screen and (min-width: 1200px) {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+.tipButtons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.result {
+    width: 100%;
+    height: 100%;
+    height: 400px;
+    color: white;
+    margin-top: 3rem;
+
+    @media screen and (min-width: 1200px) {
+        padding-left: 4rem;
+        margin-top: 0;
+    }
+
+    div {
+        background: v.$very-dark-cyan;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        text-align: center;
+    }
+}
